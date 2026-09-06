@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "TCP",
+        "Port": 8080,
+        "Ref": "ServerPort",
+        "Name": "Web Port",
+        "Description": "HTTP port for the character server web app and the Foundry sync API"
+    }
+]

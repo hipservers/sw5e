@@ -1,0 +1,146 @@
+[
+    {
+        "DisplayName": "Web Port",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$ServerPort",
+        "InputType": "number",
+        "Hidden": true,
+        "IsFlagArgument": false,
+        "ParamFieldName": "$.port",
+        "IncludeInCommandLine": false,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Download Type",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Where to fetch the server files from. \"GitHub Release\" installs the latest (or a chosen) release asset from a GitHub repository; \"Direct URL\" downloads a zip from any address. Update the server after changing this setting",
+        "Keywords": "download,type,source",
+        "FieldName": "DownloadType",
+        "InputType": "enum",
+        "ParamFieldName": "DownloadType",
+        "DefaultValue": "DownloadURL",
+        "EnumValues": {
+            "DownloadURL": "Direct URL (zip)",
+            "GithubRelease": "GitHub Release"
+        }
+    },
+    {
+        "DisplayName": "Server Download URL",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Full URL of the sw5e-character-server-amp.zip release package (used when Download Type is Direct URL). Update the server after changing this setting",
+        "Keywords": "download,url",
+        "FieldName": "DownloadURL",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "DownloadURL",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "https://example.com/sw5e-character-server-amp.zip",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "GitHub Repository",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "GitHub repository (user/repo) that publishes sw5e-character-server-amp.zip as a release asset (used when Download Type is GitHub Release)",
+        "Keywords": "github,repository,repo",
+        "FieldName": "GithubRepo",
+        "InputType": "text",
+        "ParamFieldName": "GithubRepo",
+        "DefaultValue": "",
+        "Placeholder": "yourname/sw5e-character-server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "GitHub Release Version",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Release tag to install. Empty = latest release",
+        "Keywords": "github,release,version,tag",
+        "FieldName": "GithubVersion",
+        "InputType": "text",
+        "ParamFieldName": "GithubVersion",
+        "DefaultValue": "",
+        "Placeholder": "v1.0.0",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Node.js Release Stream",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Node.js release stream from which to install the latest version, unless a specific version is set under Node.js Version. The server needs Node.js 22.13 or newer. Update the server after changing this setting",
+        "Keywords": "node,nodejs,release,stream,NodeRelease",
+        "FieldName": "NodeRelease",
+        "InputType": "enum",
+        "ParamFieldName": "NodeRelease",
+        "DefaultValue": "22",
+        "EnumValues": {
+            "22": "22 - LTS (default)",
+            "24": "24 - LTS"
+        }
+    },
+    {
+        "DisplayName": "Node.js Version",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Exact [Node.js version](https://nodejs.org/download/release/) to install, e.g. v22.22.2. Empty = latest version for the release stream above. Update the server after changing this setting",
+        "Keywords": "node,nodejs,version,NodeVersion",
+        "FieldName": "NodeVersion",
+        "InputType": "text",
+        "ParamFieldName": "NodeVersion",
+        "DefaultValue": "",
+        "Placeholder": "v22.22.2",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Node.js Command Line Arguments",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Extra Node.js flags to pass at startup",
+        "Keywords": "node,nodejs,command,line,arguments,args",
+        "FieldName": "NodeArgs",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "NodeArgs",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "--max-old-space-size=2048",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "GM Code",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Accounts:group:2",
+        "Description": "Optional secret. Anyone who registers with this code becomes a GM, and it allows registration even when the GM has closed sign-ups. The first account created on a fresh server is always the GM",
+        "Keywords": "gm,code,admin,password",
+        "FieldName": "GMCode",
+        "InputType": "password",
+        "IsFlagArgument": false,
+        "ParamFieldName": "GMCode",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Secure Cookies (HTTPS only)",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Enable when the server is reached through an HTTPS reverse proxy. Leave off when players connect over plain http://, otherwise logins will not stick",
+        "Keywords": "https,secure,cookies,ssl,proxy",
+        "FieldName": "SecureCookies",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "SecureCookies",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    }
+]
