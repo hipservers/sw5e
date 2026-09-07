@@ -142,5 +142,23 @@
             "False": "false",
             "True": "true"
         }
+    },
+    {
+        "DisplayName": "Log Level",
+        "Category": "SW5e Character Server:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "How much the server writes to this console. 'debug' logs every API request, live-sync event and transaction (useful when diagnosing Foundry sync); 'info' is the normal setting. You can also type 'debug' or 'loglevel trace' in the console while it's running",
+        "Keywords": "log,level,debug,verbose,console",
+        "FieldName": "LogLevel",
+        "InputType": "enum",
+        "ParamFieldName": "LogLevel",
+        "DefaultValue": "info",
+        "EnumValues": {
+            "error": "error (only failures)",
+            "warn": "warn",
+            "info": "info (default)",
+            "debug": "debug (requests, live sync, transactions)",
+            "trace": "trace (everything)"
+        }
     }
 ]
