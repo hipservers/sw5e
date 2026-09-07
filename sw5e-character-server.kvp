@@ -36,7 +36,7 @@ App.ExecutableLinux=node/bin/node
 App.WorkingDir=server
 App.LinuxCommandLineArgs=
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} {{NodeArgs}} server/index.js --port={{$ServerPort}} --data="{{$FullBaseDir}}data" --gmcode="{{GMCode}}" --securecookies={{SecureCookies}}
+App.CommandLineArgs={{$PlatformArgs}} {{NodeArgs}} server/index.js --port={{$ServerPort}} --data="{{$FullBaseDir}}data" --gmcode="{{GMCode}}" --securecookies={{SecureCookies}} --loglevel={{LogLevel}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"PATH":"{{$FullBaseDir}}node:{{$FullBaseDir}}node/bin:%PATH%","NODE_ENV":"production"}
